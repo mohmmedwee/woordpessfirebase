@@ -118,7 +118,7 @@ function user_insert_user($args = array())
 //    unset($args['id']);
 
     if (!$row_id) {
-        $args['date'] = current_time('mysql');
+        $args['date'] =  date("Y-m-d");
         $args['id']= rand(100000,999999);
         $serviceAccount = ServiceAccount::fromJsonFile(__DIR__ . '/firebase2/src/firbas.json');
         $firebase = (new Factory)
@@ -134,7 +134,7 @@ function user_insert_user($args = array())
 
     } else {
 
-        $args['date'] = current_time('mysql');
+        $args['date'] = date("Y-m-d");
         $serviceAccount = ServiceAccount::fromJsonFile(__DIR__ . '/firebase2/src/firbas.json');
         $firebase = (new Factory)
             ->withServiceAccount($serviceAccount)

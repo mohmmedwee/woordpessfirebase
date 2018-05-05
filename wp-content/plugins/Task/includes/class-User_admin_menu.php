@@ -27,9 +27,9 @@ class User_admin_menu {
 
          add_submenu_page( 'userslist', __( 'Product', 'wedevs' ), __( 'Product', 'wedevs' ), 'manage_options', 'product', array( $this, 'plugin_page' ) );
 
-         add_submenu_page( 'userslist', __( 'Orders', 'wedevs' ), __( 'Orders', 'wedevs' ), 'manage_options', 'userslist', array( $this, 'plugin_page' ) );
+         add_submenu_page( 'userslist', __( 'Orders', 'wedevs' ), __( 'Orders', 'wedevs' ), 'manage_options', 'order', array( $this, 'plugin_page' ) );
 
-         add_submenu_page( 'userslist', __( 'Analystic', 'wedevs' ), __( 'Analystic', 'wedevs' ), 'manage_options', 'userslist', array( $this, 'plugin_page' ) );
+         add_submenu_page( 'userslist', __( 'Analystic', 'wedevs' ), __( 'Analystic', 'wedevs' ), 'manage_options', 'userslist&action=analy', array( $this, 'plugin_page' ) );
     }
 
     /**
@@ -56,6 +56,9 @@ class User_admin_menu {
                 break;
             case 'new':
                 $template = dirname( __FILE__ ) . '/views/users1-new.php';
+                break;
+            case 'analy':
+                $template = dirname( __FILE__ ) . '/views/analystic.php';
                 break;
 
 

@@ -113,7 +113,7 @@ function product_insert_product( $args = array() ) {
 
     if ( ! $row_id ) {
 
-        $args['date'] = current_time( 'mysql' );
+        $args['date'] = date("Y-m-d");
         $args['id']= rand(100000,999999);
         $serviceAccount = ServiceAccount::fromJsonFile(__DIR__ . '/firebase2/src/firbas.json');
         $firebase = (new Factory)
@@ -129,7 +129,7 @@ function product_insert_product( $args = array() ) {
 
     } else {
 
-        $args['date'] = current_time( 'mysql' );
+        $args['date'] =date("Y-m-d");
         $serviceAccount = ServiceAccount::fromJsonFile(__DIR__ . '/firebase2/src/firbas.json');
         $firebase = (new Factory)
             ->withServiceAccount($serviceAccount)
