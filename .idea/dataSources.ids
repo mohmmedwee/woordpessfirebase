@@ -184,4 +184,7 @@
       <index name="user_nicename" unique="false" columns="user_nicename"/>
     </table>
   </data-source>
+  <data-source name="MySQL - task@54.71.235.7" uuid="795ab01a-149c-42fe-829b-de2e9df5e389">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>
